@@ -16,7 +16,7 @@ import {
   Input,
   Label,
 } from "reactstrap";
-import { Switch, NavLink, BrowserRouter as Router} from "react-router-dom";
+import { NavLink, BrowserRouter as Router} from "react-router-dom";
 
 class Header extends Component {
   constructor(props) {

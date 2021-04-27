@@ -10,7 +10,7 @@ class Directory extends Component {
     }
 
     onGameSelect(game) {
-        this.setState({selectedGame: Game});
+        this.setState({selectedGame: game});
     }
 
     renderSelectedGame(game) {

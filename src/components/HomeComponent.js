@@ -1,13 +1,9 @@
 import React from "react";
-import { render } from "react-dom";
 import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
-
 function Home(props) {
-
-  render() 
-    return (
-      <div className="container">
+  return (
+    <div className="container">
       <div className="row">
         <div className="col-md m-1">
           <Card>
@@ -18,7 +14,7 @@ function Home(props) {
           </Card>
         </div>
         <div className="col-md m-1">
-        <Card>
+          <Card>
             <CardTitle>Dominion</CardTitle>
             <CardImg></CardImg>
             <CardText></CardText>
@@ -26,7 +22,7 @@ function Home(props) {
           </Card>
         </div>
         <div className="col-md m-1">
-        <Card>
+          <Card>
             <CardTitle>Dominion</CardTitle>
             <CardImg></CardImg>
             <CardText></CardText>
@@ -35,7 +31,7 @@ function Home(props) {
         </div>
       </div>
     </div>
-    );
-  }
+  );
+}
 
 export default Home;
