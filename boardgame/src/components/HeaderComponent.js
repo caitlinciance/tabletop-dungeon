@@ -16,7 +16,7 @@ import {
   Input,
   Label,
 } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { Switch, NavLink, BrowserRouter as Router} from "react-router-dom";
 
 class Header extends Component {
   constructor(props) {
@@ -63,11 +63,12 @@ class Header extends Component {
             </div>
           </div>
         </Jumbotron>
+        <Router>
         <Navbar dark sticky="top" expand="md">
           <div className="container">
             <NavbarBrand className="mr-auto" href="/">
               <img
-                src="/assets/images/logo.png"
+                src="../public/assets/horizontal-logo.png"
                 height="30"
                 width="30"
                 alt="Tabletop Logo"
@@ -95,6 +96,7 @@ class Header extends Component {
             </Collapse>
           </div>
         </Navbar>
+        </Router>
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
           <ModalBody>

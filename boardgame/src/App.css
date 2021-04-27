@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.navbar {
+  background-color: #64A297;
+}
+
+.navbar a {
+  color: white;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +44,32 @@
     transform: rotate(360deg);
   }
 }
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/****** Product ******/
+
+.game img-wrapper {
+    margin: -15px -15px 0;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+  }
+
+  .game img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .game price {
+    margin-bottom: 0;
+  }
+

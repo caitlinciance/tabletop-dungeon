@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
 import './App.css';
+import Main from "./components/MainCompontent.js";
+import Directory from './components/DirectoryComponent';
+
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <Navbar dark color="primary">
-                <div className="container">
-                    <NavbarBrand href="/">Boardgame Dungeon</NavbarBrand>
-                </div>
-                </Navbar>
+               <Main /> 
+               <Directory />
             </div>
         );
     }
