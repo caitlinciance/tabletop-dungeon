@@ -51,6 +51,18 @@
   overflow: hidden;
 }
 
+.slide {
+  max-height: 500px;
+}
+
+.carousel .slide .legend {
+  bottom: 45%  !important;
+  background: transparent !important;
+  font-size: 40px !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
 /****** Product ******/
 
 .game img-wrapper {
@@ -72,4 +84,5 @@
   .game price {
     margin-bottom: 0;
   }
+
 

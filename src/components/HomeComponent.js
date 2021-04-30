@@ -1,11 +1,12 @@
 import React from "react";
 import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
-import TopGames from './TopGamesComponent'
+import Slider from './SlideshowComponent'
 
 function Home(props) {
   return (
+    <>
+      <Slider />
     <div className="container">
-        <TopGames />
       <h2>Featured Games</h2>
       <div className="row">
         <div className="col-md m-1">
@@ -31,6 +32,7 @@ function Home(props) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

@@ -36,7 +36,7 @@ export default class TopGames extends Component {
       <div class="container">
         <div class="row">
           {this.state.results.map((game) => (
-            <Card className="col-md-4">
+            <Card className="col-md-3">
               <CardImg top width="100%" height="300px" src={game.thumbnail} style={imgStyle} />
               <CardBody>
                 <CardTitle tag="h5">{game.name}</CardTitle>
@@ -51,6 +51,7 @@ export default class TopGames extends Component {
     );
   }
 }
+
 
 const imgStyle = {
     objectFit: 'cover',
