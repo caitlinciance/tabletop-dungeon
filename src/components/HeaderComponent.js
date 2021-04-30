@@ -54,6 +54,40 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
+        <Router>
+          <Navbar dark sticky="top" expand="md">
+            <div className="container">
+              <NavbarBrand className="mr-auto" href="/">
+                <img
+                  src="../public/assets/horizontal-logo.png"
+                  height="30"
+                  width="30"
+                  alt="Tabletop Logo"
+                />
+              </NavbarBrand>
+              <NavbarToggler onClick={this.toggleNav} />
+              <Collapse isOpen={this.state.isNavOpen} navbar>
+                <Nav navbar>
+                  <NavItem>
+                    <NavLink className="nav-link" to="/home">
+                      <i className="fa fa-home fa-lg " /> Home
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink className="nav-link" to="/directory">
+                      <i className="fa fa-list fa-lg " /> Game Directory
+                    </NavLink>
+                  </NavItem>
+                </Nav>
+                <span className="navbar-text ml-auto">
+                  <Button outline onClick={this.toggleModal}>
+                    <i className="fa fa-sign-in fa-lg" /> Login
+                  </Button>
+                </span>
+              </Collapse>
+            </div>
+          </Navbar>
+        </Router>
         <Jumbotron fluid>
           <div className="container">
             <div className="row">
@@ -63,40 +97,6 @@ class Header extends Component {
             </div>
           </div>
         </Jumbotron>
-        <Router>
-        <Navbar dark sticky="top" expand="md">
-          <div className="container">
-            <NavbarBrand className="mr-auto" href="/">
-              <img
-                src="../public/assets/horizontal-logo.png"
-                height="30"
-                width="30"
-                alt="Tabletop Logo"
-              />
-            </NavbarBrand>
-            <NavbarToggler onClick={this.toggleNav} />
-            <Collapse isOpen={this.state.isNavOpen} navbar>
-              <Nav navbar>
-                <NavItem>
-                  <NavLink className="nav-link" to="/home">
-                    <i className="fa fa-home fa-lg " /> Home
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink className="nav-link" to="/directory">
-                    <i className="fa fa-list fa-lg " /> Game Directory
-                  </NavLink>
-                </NavItem>
-              </Nav>
-              <span className="navbar-text ml-auto">
-                <Button outline onClick={this.toggleModal}>
-                  <i className="fa fa-sign-in fa-lg" /> Login
-                </Button>
-              </span>
-            </Collapse>
-          </div>
-        </Navbar>
-        </Router>
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
           <ModalBody>
