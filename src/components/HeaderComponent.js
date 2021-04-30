@@ -59,9 +59,7 @@ class Header extends Component {
             <div className="container">
               <NavbarBrand className="mr-auto" href="/">
                 <img
-                  src="../public/assets/horizontal-logo.png"
-                  height="30"
-                  width="30"
+                  src="./assets/horizontal-logo.png"
                   alt="Tabletop Logo"
                 />
               </NavbarBrand>
