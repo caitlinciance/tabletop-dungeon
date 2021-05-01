@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import {
   Navbar,
   NavbarBrand,
@@ -6,7 +6,6 @@ import {
   NavbarToggler,
   Collapse,
   NavItem,
-  Jumbotron,
   Button,
   Modal,
   ModalHeader,
@@ -15,86 +14,72 @@ import {
   FormGroup,
   Input,
   Label,
-} from "reactstrap";
-import { NavLink, BrowserRouter as Router} from "react-router-dom";
+} from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 class Header extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.toggleNav = this.toggleNav.bind(this);
-    this.toggleModal = this.toggleModal.bind(this);
-    this.handleLogin = this.handleLogin.bind(this);
+    this.toggleNav = this.toggleNav.bind(this)
+    this.toggleModal = this.toggleModal.bind(this)
+    this.handleLogin = this.handleLogin.bind(this)
     this.state = {
       isNavOpen: false,
       isModalOpen: false,
-    };
+    }
   }
 
   toggleNav() {
     this.setState({
       isNavOpen: !this.state.isNavOpen,
-    });
+    })
   }
 
   toggleModal() {
     this.setState({
       isModalOpen: !this.state.isModelOpen,
-    });
+    })
   }
 
   handleLogin(event) {
     alert(
       `Username: ${this.username.value} Password: ${this.password.value} Remember: ${this.remember.checked}`
-    );
-    this.toggleModal();
-    event.preventDefault();
+    )
+    this.toggleModal()
+    event.preventDefault()
   }
 
   render() {
     return (
       <React.Fragment>
-        <Router>
-          <Navbar dark sticky="top" expand="md">
-            <div className="container">
-              <NavbarBrand className="mr-auto" href="/">
-                <img
-                  src="./assets/horizontal-logo.png"
-                  alt="Tabletop Logo"
-                />
-              </NavbarBrand>
-              <NavbarToggler onClick={this.toggleNav} />
-              <Collapse isOpen={this.state.isNavOpen} navbar>
-                <Nav navbar>
-                  <NavItem>
-                    <NavLink className="nav-link" to="/home">
-                      <i className="fa fa-home fa-lg " /> Home
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink className="nav-link" to="/directory">
-                      <i className="fa fa-list fa-lg " /> Game Directory
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-                <span className="navbar-text ml-auto">
-                  <Button outline onClick={this.toggleModal}>
-                    <i className="fa fa-sign-in fa-lg" /> Login
-                  </Button>
-                </span>
-              </Collapse>
-            </div>
-          </Navbar>
-        </Router>
-        <Jumbotron fluid>
+        <Navbar dark sticky="top" expand="md">
           <div className="container">
-            <div className="row">
-              <div className="col">
-                <h1>TableTop Dungeon</h1>
-              </div>
-            </div>
+            <NavbarBrand className="mr-auto" href="/">
+              <img src="./assets/horizontal-logo.png" alt="Tabletop Logo" />
+            </NavbarBrand>
+            <NavbarToggler onClick={this.toggleNav} />
+            <Collapse isOpen={this.state.isNavOpen} navbar>
+              <Nav navbar>
+                <NavItem>
+                  <NavLink className="nav-link" to="/">
+                    <i className="fa fa-home fa-lg " /> Home
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to="/directory">
+                    <i className="fa fa-list fa-lg " /> Game Directory
+                  </NavLink>
+                </NavItem>
+              </Nav>
+              <span className="navbar-text ml-auto">
+                <Button outline onClick={this.toggleModal}>
+                  <i className="fa fa-sign-in fa-lg" /> Login
+                </Button>
+              </span>
+            </Collapse>
           </div>
-        </Jumbotron>
+        </Navbar>
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
           <ModalBody>
@@ -134,8 +119,8 @@ class Header extends Component {
           </ModalBody>
         </Modal>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default Header;
+export default Header
